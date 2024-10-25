@@ -35,6 +35,6 @@ if __name__ == '__main__':
             workers.append(worker)
             # Отсортировать список в случае необходимости.
             if len(workers) > 1:
-                workers.sort(key=lambda item: item.get('numb', ''))
+                workers.sort(key=lambda item: item.get('name', ''))
 
     print(workers)
