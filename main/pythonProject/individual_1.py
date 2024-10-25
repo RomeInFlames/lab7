@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import sys
-from datetime import date
-
-
 if __name__ == '__main__':
     # Список работников.
     workers = []
@@ -37,10 +33,13 @@ if __name__ == '__main__':
             if len(workers) > 1:
                 workers.sort(key=lambda item: item.get('name', ''))
 
-            elif command == 'month':
-                key_month = int(input("Месяц? "))
-                if len(workers) > 1:
-                    
-                    print(worker)
+        elif command == 'month':
+            key_count = 0
+            key_month = int(input("Месяц? "))
+            while len(workers) >= key_count and key_month == workers[key_count]["date"][1]:
+                print(worker)
+                key_count += 1
+
+    print(workers)
                     
     print(workers)
