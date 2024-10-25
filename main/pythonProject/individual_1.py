@@ -41,5 +41,3 @@ if __name__ == '__main__':
                 key_count += 1
 
     print(workers)
-                    
-    print(workers)
