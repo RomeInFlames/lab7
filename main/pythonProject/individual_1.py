@@ -22,13 +22,13 @@ if __name__ == '__main__':
             # Запросить данные о работнике.
             name = input("Фамилия и инициалы? ")
             numb = input("Телефон? ")
-            year = int(input("Дата рождения? "))
+            date = list(map(int, (input("Дата рождения? ")).split()))
 
             # Создать словарь.
             worker = {
                 'name': name,
                 'numb': numb,
-                'year': year,
+                'date': date,
             }
 
             # Добавить словарь в список.
