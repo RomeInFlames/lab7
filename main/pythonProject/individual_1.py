@@ -41,4 +41,6 @@ if __name__ == '__main__':
                     print(workers[key_count])
                 key_count += 1
 
-    print(workers)
+    print("Отсортированный список:")
+    for item in workers:
+        print(item)
