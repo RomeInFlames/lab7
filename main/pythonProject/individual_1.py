@@ -37,4 +37,10 @@ if __name__ == '__main__':
             if len(workers) > 1:
                 workers.sort(key=lambda item: item.get('name', ''))
 
+            elif command == 'month':
+                key_month = int(input("Месяц? "))
+                if len(workers) > 1:
+                    
+                    print(worker)
+                    
     print(workers)
