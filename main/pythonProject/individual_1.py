@@ -36,8 +36,9 @@ if __name__ == '__main__':
         elif command == 'month':
             key_count = 0
             key_month = int(input("Месяц? "))
-            while len(workers) >= key_count and key_month == workers[key_count]["date"][1]:
-                print(worker)
+            while len(workers) > key_count :
+                if key_month == workers[key_count]["date"][1]:
+                    print(worker)
                 key_count += 1
 
     print(workers)
