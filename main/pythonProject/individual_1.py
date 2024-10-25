@@ -34,12 +34,16 @@ if __name__ == '__main__':
                 workers.sort(key=lambda item: item.get('name', ''))
 
         elif command == 'month':
-            key_count = 0
+            key_count1 = 0
+            key_count2 = 0
             key_month = int(input("Месяц? "))
-            while len(workers) > key_count :
-                if key_month == workers[key_count]["date"][1]:
-                    print(workers[key_count])
-                key_count += 1
+            while len(workers) > key_count1 :
+                if key_month == workers[key_count1]["date"][1]:
+                    print(workers[key_count1])
+                    key_count2 += 1
+                key_count1 += 1
+            if key_count2 == 0:
+                print('Сотрудников с указанными параметрами не найдено')
 
     print("Отсортированный список:")
     for item in workers:
