@@ -36,15 +36,18 @@ if __name__ == '__main__':
         elif command == 'month':
             key_count1 = 0
             key_count2 = 0
+            # Запросить искомый месяц.
             key_month = int(input("Месяц? "))
-            while len(workers) > key_count1 :
+
+            # Найти соответствующих сотрудников.
+            for key_count1, item in enumerate(workers):
                 if key_month == workers[key_count1]["date"][1]:
                     print(workers[key_count1])
                     key_count2 += 1
-                key_count1 += 1
             if key_count2 == 0:
                 print('Сотрудников с указанными параметрами не найдено')
 
+    # Вывести результат.
     print("Отсортированный список:")
     for item in workers:
         print(item)
